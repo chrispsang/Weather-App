@@ -1,0 +1,338 @@
+/* Styles for weather container */
+.weather-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Styles for header */
+  .weather-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .weather-header h2 {
+    margin: 0;
+    color: #333;
+  }
+  
+  .logout-button {
+    padding: 10px;
+    background-color: #ff4c4c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .logout-button:hover {
+    background-color: #ff2c2c;
+  }
+  
+  /* Styles for form */
+  .weather-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .weather-input {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 60%;
+  }
+  
+  .get-weather-button,
+  .save-location-button {
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 10px;
+  }
+  
+  .get-weather-button:hover,
+  .save-location-button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Optional: Specific styles for each button */
+  .get-weather-button {
+    margin-left: 5px; 
+    margin-bottom: 0.5px;
+  }
+  
+  .save-location-button {
+    background-color: #2196f3; /* Different color for Save Location button */
+    margin-left: 5px; 
+    margin-bottom: 10px;
+  }
+  
+  .save-location-button:hover {
+    background-color: #1976d2;
+  }
+  
+  /* Styles for loading and error messages */
+  .loading-message,
+  .error-message {
+    color: #ff0000;
+    font-weight: bold;
+  }
+  
+  /* Styles for weather and forecast data */
+  .weather-data,
+  .forecast-data,
+  .saved-locations {
+    margin-top: 20px;
+  }
+  
+  .current-forecast {
+    padding: 15px;
+    border-radius: 10px;
+    color: #fff;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* Styles for daily forecast */
+  .daily-forecast {
+    display: flex;
+    overflow-x: auto;
+    margin-top: 20px;
+    padding: 10px 0;
+  }
+  
+  .daily-forecast-item {
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 120px;
+    min-width: 120px;
+    margin-right: 10px;
+    border-radius: 5px;
+    background-color: #f4f4f9;
+    flex: 0 0 auto;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .daily-forecast-item:hover {
+    background-color: #e0e0e0;
+  }
+  
+  /* Styles for hourly forecast */
+  .hourly-forecast {
+    display: flex;
+    overflow-x: auto;
+    margin-top: 20px;
+    padding: 10px 0;
+  }
+  
+  .hourly-forecast-item {
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 120px;
+    min-width: 120px;
+    margin-right: 10px;
+    border-radius: 5px;
+    background-color: #f4f4f9;
+    flex: 0 0 auto;
+    transition: background-color 0.3s;
+    cursor: pointer;
+  }
+  
+  .hourly-forecast-item:hover {
+    background-color: #e0e0e0;
+  }
+  
+  /* Styles for hourly forecast details */
+  .hourly-forecast-details {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f4f4f9;
+    text-align: left;
+  }
+  
+  /* Styles for saved locations */
+  .saved-locations {
+    margin-top: 20px;
+    position: relative;
+  }
+  
+  .toggle-saved-locations-button {
+    padding: 8px 12px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .toggle-saved-locations-button:hover {
+    background-color: #45a049;
+  }
+  
+  .saved-locations-list {
+    max-height: 300px; /* Adjust this value as needed */
+    overflow-y: auto; /* Ensures vertical scroll when content exceeds max-height */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  .saved-locations-list h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    text-align: left; /* Align the title to the left */
+  }
+  
+  .saved-location {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    transition: background-color 0.3s;
+  }
+  
+  .saved-location:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .saved-location-city {
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .saved-location-buttons {
+    display: flex;
+  }
+  
+  .get-weather-saved-location,
+  .delete-saved-location {
+    padding: 6px 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 5px;
+  }
+  
+  .get-weather-saved-location:hover,
+  .delete-saved-location:hover {
+    background-color: #45a049;
+  }
+  
+  .delete-saved-location {
+    background-color: #ff4c4c;
+  }
+  
+  .delete-saved-location:hover {
+    background-color: #ff2c2c;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .daily-forecast-item,
+    .hourly-forecast-item {
+      width: 100px;
+      min-width: 100px;
+    }
+  
+    .saved-locations-list {
+      max-height: 150px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .weather-container {
+      padding: 20px;
+    }
+  
+    .weather-header h2 {
+      font-size: 24px;
+    }
+  
+    .daily-forecast-item,
+    .hourly-forecast-item {
+      width: 80px;
+      min-width: 80px;
+    }
+  }
+  
+  /* Backgrounds for weather conditions */
+  .current-forecast.clear-sky,
+  .daily-forecast-item.clear-sky,
+  .hourly-forecast-item.clear-sky {
+    background-image: url('/images/sunny-background.jpeg');
+  }
+  
+  .current-forecast.cloudy,
+  .daily-forecast-item.cloudy,
+  .hourly-forecast-item.cloudy {
+    background-image: url('/images/cloud.jpeg');
+    color: black;
+  }
+  
+  .current-forecast.rainy,
+  .daily-forecast-item.rainy,
+  .hourly-forecast-item.rainy {
+    background-image: url('/images/rain.jpeg');
+    color: white;
+  }
+  
+  .current-forecast.snowy,
+  .daily-forecast-item.snowy,
+  .hourly-forecast-item.snowy {
+    background-image: url('/images/snowy-background.jpeg');
+  }
+  
+  .current-forecast.thunderstorm,
+  .daily-forecast-item.thunderstorm,
+  .hourly-forecast-item.thunderstorm {
+    background-image: url('/images/thunder.webp');
+    color: beige;
+  }
+  
+  /* Styles for close button */
+  .close-button {
+    background-color: #ff4c4c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    float: right;
+  }
+  
+  .close-button:hover {
+    background-color: #ff2c2c;
+  }
+  
